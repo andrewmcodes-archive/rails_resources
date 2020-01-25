@@ -5,17 +5,19 @@
 #  id         :bigint           not null, primary key
 #  uid        :string
 #  name       :string           default("Anonymous"), not null
-#  role       :string           default("member"), not null
+#  role       :integer          default("member"), not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  uid: MyString
-  email: MyString
+admin:
+  uid: <%= SecureRandom.uuid %>
+  name: Admin User
+  role: administrator
 
-two:
-  uid: MyString
-  email: MyString
+member:
+  uid: <%= SecureRandom.uuid %>
+  name: Member User
+  role: member

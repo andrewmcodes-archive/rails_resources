@@ -18,9 +18,10 @@ ActiveRecord::Schema.define(version: 2020_01_25_073118) do
   create_table "users", force: :cascade do |t|
     t.string "uid"
     t.string "name", default: "Anonymous", null: false
-    t.string "role", default: "member", null: false
+    t.integer "role", default: 1, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["role"], name: "index_users_on_role"
     t.index ["uid"], name: "index_users_on_uid"
   end
 
