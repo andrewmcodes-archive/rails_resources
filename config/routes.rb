@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get "auth/auth0/callback" => "sessions#create"
   get "auth/failure" => "sessions#failure"
 
-  root to: "home#show"
+  root to: "resources#index"
 end

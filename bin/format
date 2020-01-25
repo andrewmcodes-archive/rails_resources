@@ -2,3 +2,6 @@
 
 echo "== StandardRb =="
 bin/standardrb --fix
+
+echo "== Prettier =="
+yarn run format

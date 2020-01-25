@@ -1,6 +1,10 @@
 {
   "name": "rails_resources",
   "private": true,
+  "scripts": {
+    "format": "prettier --write \"./**/*.{js,json,yaml,yml,md,config.js}\"",
+    "format:check": "prettier --check \"./**/*.{js,json,yaml,yml,md,config.js}\""
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
     "@rails/actioncable": "^6.0.0",
@@ -12,6 +16,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "prettier": "^1.19.1",
     "tailwindcss": "^1.1.4",
     "webpack-dev-server": "^3.10.1"
   }

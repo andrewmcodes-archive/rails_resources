@@ -1,0 +1,7 @@
+tmp/
+log/
+node_modules/
+public/
+vendor/
+CODE_OF_CONDUCT.md
+LICENSE.md

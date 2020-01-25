@@ -32,14 +32,14 @@ Run `bin/rails s` in your terminal and the app should be live at [localhost:3000
 
 1. [Sign up](https://auth0.com/signup) for Auth0 account
 2. Create new application
-    - Application type is "Regular Web Applications"
+   - Application type is "Regular Web Applications"
 3. Go to settings page for your new Auth0 app
-    - Copy the Domain, Client ID, & Client Secret to `.env`
-    - Set Token Endpoint Authentication Method to `Post`
-    - Setup an ngrok tunnel
-    - Set Allowed Callbacks URLs to `https://MY_NGROK_HOST.ngrok.io/auth/auth0/callback`
-    - Set Application Login URI, Allowed Lougout URLs, and Allowed Origins (CORS) to `https://MY_NGROK_HOST.ngrok.io/`
-    - Save changes
+   - Copy the Domain, Client ID, & Client Secret to `.env`
+   - Set Token Endpoint Authentication Method to `Post`
+   - Setup an ngrok tunnel
+   - Set Allowed Callbacks URLs to `https://MY_NGROK_HOST.ngrok.io/auth/auth0/callback`
+   - Set Application Login URI, Allowed Lougout URLs, and Allowed Origins (CORS) to `https://MY_NGROK_HOST.ngrok.io/`
+   - Save changes
 4. Restart the Rails server and you should be able to login via Auth0
 
 ## Deploying to Heroku
