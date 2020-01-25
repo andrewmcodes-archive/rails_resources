@@ -16,15 +16,6 @@
     <% end %>
 
     <%= render "/shared/navbar" %>
-    <!-- TEMPORARY -->
-    <% if user_signed_in? %>
-      <%= link_to "Dashboard", dashboard_path %> |
-      <%= link_to 'Log Out', sessions_path, method: :delete %>
-      Hello <%= current_user&.name %>
-    <% else %>
-      <%= link_to 'Log In', 'auth/auth0', method: :post %>
-    <% end %>
-    <!-- ========== -->
     <div class="container mx-auto mt-4 pt-12">
       <%= yield %>
     </div>
