@@ -30,6 +30,7 @@ group :development do
   gem "ngrok-tunnel"
   gem "standard"
   gem "tty-box"
+  gem "htmlbeautifier"
   gem "web-console", ">= 3.3.0"
 end
 

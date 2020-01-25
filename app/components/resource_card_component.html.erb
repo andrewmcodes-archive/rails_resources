@@ -2,16 +2,13 @@
   <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg border-t-2 border-red-600">
     <div class="px-4 py-5 flex-auto">
       <%= link_to resource.title, resource.url, class: "text-xl font-semibold" %>
-      <div class="flex justify-between">
-        <p class="mt-2 text-gray-600"><%= resource.user.name %></p>
-        <div data-controller='toggle' class="">
-          <button data-action='click->toggle#toggle touch->toggle#toggle' class="text-gray-600">
-            Description
-            <i class="fa fa-arrow-down" aria-hidden="true"></i>
-          </button>
-          <div data-target='toggle.toggleable' class="m-4 hidden">
-            <p><%= resource.description %></p>
-          </div>
+      <div data-controller='toggle' class="">
+        <button data-action='click->toggle#toggle touch->toggle#toggle' class="text-gray-600">
+          Description
+          <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </button>
+        <div data-target='toggle.toggleable' class="m-4 hidden">
+          <p><%= resource.description %></p>
         </div>
       </div>
       <% if resource.tag_list.any? %>
