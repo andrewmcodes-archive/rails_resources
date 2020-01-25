@@ -30,4 +30,8 @@
 
 <br>
 
+<% @resources.each do |resource| %>
+  <%= render(ResourceCardComponent, resource: resource) %>
+<% end %>
+
 <%= link_to 'New Resource', new_resource_path %>
