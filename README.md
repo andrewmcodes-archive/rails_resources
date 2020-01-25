@@ -9,12 +9,14 @@ Resources for Ruby on Rails.
 - Ruby: 2.7
 - Bundler: 2.1.4
   - `gem install bundler:`
+- Yarn
+  - `brew install yarn`
 - Postgres
   - `brew install postgresql`
+- Redis
+  - `brew install redis`
 - Heroku CLI (not needed unless deploying)
   - `brew tap heroku/brew && brew install heroku`
-- yarn: 2.0.0
-  - `npm install -g yarn@berry`
 
 ```sh
 git clone git@github.com:andrewmcodes/rails_resources.git # or clone your own fork
@@ -27,7 +29,7 @@ Your app should now be running on [localhost:3000](http://localhost:3000/).
 
 ## Deploying to Heroku
 
-```
+```sh
 heroku create
 git push heroku master
 heroku run rake db:migrate
