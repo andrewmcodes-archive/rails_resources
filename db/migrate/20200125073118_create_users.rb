@@ -3,11 +3,11 @@ class CreateUsers < ActiveRecord::Migration[6.0]
     create_table :users do |t|
       t.string :uid
       t.string :name, null: false, default: "Anonymous"
-      t.integer :role, null: false, default: 1
+      t.boolean :admin, null: false, default: false
 
       t.timestamps
     end
     add_index :users, :uid
-    add_index :users, :role
+    add_index :users, :admin
   end
 end

@@ -86,6 +86,8 @@ GEM
       railties (>= 3.2, < 6.1)
     equatable (0.6.1)
     erubi (1.9.0)
+    faker (2.10.1)
+      i18n (>= 1.6, < 2)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.12.1)
@@ -268,6 +270,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   dotenv-rails
+  faker
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   model_probe

@@ -5,7 +5,7 @@
 #  id         :bigint           not null, primary key
 #  uid        :string
 #  name       :string           default("Anonymous"), not null
-#  role       :integer          default("member"), not null
+#  admin      :boolean          default(FALSE), not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -15,9 +15,9 @@
 admin:
   uid: <%= SecureRandom.uuid %>
   name: Admin User
-  role: administrator
+  admin: true
 
 member:
   uid: <%= SecureRandom.uuid %>
   name: Member User
-  role: member
+  admin: false

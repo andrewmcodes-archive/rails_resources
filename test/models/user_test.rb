@@ -5,7 +5,7 @@
 #  id         :bigint           not null, primary key
 #  uid        :string
 #  name       :string           default("Anonymous"), not null
-#  role       :integer          default("member"), not null
+#  admin      :boolean          default(FALSE), not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

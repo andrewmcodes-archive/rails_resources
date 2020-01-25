@@ -14,5 +14,6 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-import './stylesheets.css'
+import '@fortawesome/fontawesome-free/css/solid.css'
+import './stylesheets.scss'
 import "controllers"

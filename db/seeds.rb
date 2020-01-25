@@ -1,7 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Admin
+User.create!(uid: Faker::Omniauth.github[:uid], name: Faker::Name.name, admin: true)
+
+# Non-admins
+5.times do
+  user = User.create!(uid: Faker::Omniauth.github[:uid], name: Faker::Name.name, admin: false)
+  5.times { Resource.create!(title: Faker::Book.title, url: Faker::Internet.domain_name, description: Faker::Marketing.buzzwords, user_id: user.id) }
+end

@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <% flash.each do |key, value| %>
+      <%= render(FlashComponent, key: key, value: value) %>
+    <% end %>
+
+    <%= render "/shared/navbar" %>
+    <!-- TEMPORARY -->
     <% if user_signed_in? %>
       <%= link_to "Dashboard", dashboard_path %> |
       <%= link_to 'Log Out', sessions_path, method: :delete %>
@@ -18,6 +24,9 @@
     <% else %>
       <%= link_to 'Log In', 'auth/auth0', method: :post %>
     <% end %>
-    <%= yield %>
+    <!-- ========== -->
+    <div class="container mx-auto mt-4 pt-12">
+      <%= yield %>
+    </div>
   </body>
 </html>
